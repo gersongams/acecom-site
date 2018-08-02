@@ -11,10 +11,10 @@ const TemplateWrapper = ({ children }) => (
     <Navbar />
     <div>{children()}</div>
   </div>
-)
+);
 
 TemplateWrapper.propTypes = {
   children: PropTypes.func,
-}
+};
 
 export default TemplateWrapper

@@ -103,7 +103,7 @@ export const ProductPageTemplate = ({
       </div>
     </div>
   </section>
-)
+);
 
 ProductPageTemplate.propTypes = {
   image: PropTypes.string,
@@ -127,10 +127,10 @@ ProductPageTemplate.propTypes = {
     description: PropTypes.string,
     plans: PropTypes.array,
   }),
-}
+};
 
 const ProductPage = ({ data }) => {
-  const { frontmatter } = data.markdownRemark
+  const { frontmatter } = data.markdownRemark;
 
   return (
     <ProductPageTemplate
@@ -145,7 +145,7 @@ const ProductPage = ({ data }) => {
       pricing={frontmatter.pricing}
     />
   )
-}
+};
 
 ProductPage.propTypes = {
   data: PropTypes.shape({
@@ -153,7 +153,7 @@ ProductPage.propTypes = {
       frontmatter: PropTypes.object,
     }),
   }),
-}
+};
 
 export default ProductPage
 
@@ -207,4 +207,4 @@ export const productPageQuery = graphql`
       }
     }
   }
-`
+`;

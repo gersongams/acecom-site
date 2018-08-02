@@ -28,7 +28,7 @@ const TagsPage = ({
       </div>
     </div>
   </section>
-)
+);
 
 export default TagsPage
 
@@ -46,4 +46,4 @@ export const tagPageQuery = graphql`
       }
     }
   }
-`
+`;

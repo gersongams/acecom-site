@@ -13,7 +13,7 @@ export const BlogPostTemplate = ({
   title,
   helmet,
 }) => {
-  const PostContent = contentComponent || Content
+  const PostContent = contentComponent || Content;
 
   return (
     <section className="section">
@@ -43,7 +43,7 @@ export const BlogPostTemplate = ({
       </div>
     </section>
   )
-}
+};
 
 BlogPostTemplate.propTypes = {
   content: PropTypes.string.isRequired,
@@ -51,10 +51,10 @@ BlogPostTemplate.propTypes = {
   description: PropTypes.string,
   title: PropTypes.string,
   helmet: PropTypes.instanceOf(Helmet),
-}
+};
 
 const BlogPost = ({ data }) => {
-  const { markdownRemark: post } = data
+  const { markdownRemark: post } = data;
 
   return (
     <BlogPostTemplate
@@ -66,13 +66,13 @@ const BlogPost = ({ data }) => {
       title={post.frontmatter.title}
     />
   )
-}
+};
 
 BlogPost.propTypes = {
   data: PropTypes.shape({
     markdownRemark: PropTypes.object,
   }),
-}
+};
 
 export default BlogPost
 
@@ -89,4 +89,4 @@ export const pageQuery = graphql`
       }
     }
   }
-`
+`;
